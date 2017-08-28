@@ -11,3 +11,5 @@ This is a test app for parsing data from Gambit live feed of TUF-2000M, an ultra
 <br>
 here are some screenshots from the app.
 ![tuf2000app01](https://user-images.githubusercontent.com/16446932/29757814-6900e0ac-8bb7-11e7-96f6-05b891cd12af.png)
+
+![tuf2000app02](https://user-images.githubusercontent.com/16446932/29757830-87bbabee-8bb7-11e7-8556-37d1b487d851.png)
