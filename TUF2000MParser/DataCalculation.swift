@@ -24,7 +24,15 @@ extension MasterDataSource {
 		case .analogInputAI3:
 			result = real4ToFloat(firstValue, secondValue)
 		case .fluidSoundSpeed:
-			result = real4ToFloat(firstValue, secondValue)
+			let rawResult = real4ToFloat(firstValue, secondValue)
+			if rawResult.characters.contains(".") {
+				let resultRange = String(rawResult.characters.prefix(5))
+				result = resultRange
+			} else {
+				if rawResult.characters.count > 5 {
+					result = "Extreme..."
+				}
+			}
 		case .currentInputAI3:
 			result = real4ToFloat(firstValue, secondValue)
 		case .errorCode:
