@@ -25,8 +25,10 @@ extension CurrentReadingViewController {
 	
 	
 	func setupRefresh() {
-		collectionView?.refreshControl?.beginRefreshing()
-		collectionView?.refreshControl?.endRefreshing()
+		masterDataSource.calendars.removeAll()
+		masterDataSource.registers.removeAll()
+		masterDataSource.getValues()
+		collectionView?.reloadData()
 		
 	}
 	
