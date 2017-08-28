@@ -22,8 +22,13 @@ class CurrentReadingViewController: UICollectionViewController, UICollectionView
 		setupNavbar()
 		setupCollectionView()
 		masterDataSource.getValues()
-		setupRefresh()
 		
+		
+	}
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		setupRefresh()
 	}
 
 	fileprivate func setupCollectionView() {
@@ -35,9 +40,7 @@ class CurrentReadingViewController: UICollectionViewController, UICollectionView
 		collectionView?.register(Header.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
 		
 	}
-	
-	
-	
+
 }
 
 extension CurrentReadingViewController {
