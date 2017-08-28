@@ -41,10 +41,11 @@ var register: Register? {
 			guard let register = register else { return }
 			registerNameLabel.text = register.title
 			valueLabel.text = register.value
+			temperatureUnit()
 			valueUnit(.fluidSoundSpeed, unit: .fluidSoundSpeed)
 			valueUnit(.flowRate, unit: .flowRate)
 			valueUnit(.currentInputAI3, unit: .currentInputAI3)
-			temperatureUnit()
+			
 		}
 	}
 	
@@ -60,6 +61,8 @@ var register: Register? {
 		
 		if registerNameLabel.text! == inletTemp || registerNameLabel.text! == outletTemp {
 			unitLabel.text = Unit.temperature.rawValue
+		} else {
+			unitLabel.text = ""
 		}
 	}
 	
@@ -70,7 +73,8 @@ var register: Register? {
 		label.text = "+ Energy Accumulator"
 		label.font = UIFont.systemFont(ofSize: 16)
 		label.textAlignment = .center
-		label.numberOfLines = 2
+		label.adjustsFontSizeToFitWidth = true
+		label.minimumScaleFactor = 0.2
 		return label
 	}()
 	
@@ -79,7 +83,8 @@ var register: Register? {
 		label.text = " -58"
 		label.font = UIFont.systemFont(ofSize: 24)
 		label.textAlignment = .center
-		label.numberOfLines = 2
+		label.adjustsFontSizeToFitWidth = true
+		label.minimumScaleFactor = 10 / UIFont.labelFontSize
 		label.layer.cornerRadius = 5
 		label.layer.masksToBounds = true
 		return label
@@ -101,14 +106,14 @@ var register: Register? {
 		noAutoResizeMask(views: registerNameLabel, valueLabel, unitLabel)
 		NSLayoutConstraint.activate([
 			registerNameLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 4),
-			registerNameLabel.bottomAnchor.constraint(equalTo: valueLabel.topAnchor, constant: 8),
+			registerNameLabel.heightAnchor.constraint(equalToConstant: self.frame.height / 3),
 			registerNameLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
 			registerNameLabel.widthAnchor.constraint(equalTo: self.widthAnchor),
 			
 			valueLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
 			valueLabel.rightAnchor.constraint(equalTo: unitLabel.leftAnchor, constant: 2),
-			valueLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -(self.frame.height / 12)),
-			valueLabel.heightAnchor.constraint(equalToConstant: 32),
+			valueLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -(self.frame.height / 16)),
+			valueLabel.heightAnchor.constraint(equalToConstant: self.frame.height / 3),
 			
 			unitLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -12),
 			unitLabel.bottomAnchor.constraint(equalTo: valueLabel.bottomAnchor, constant: -(self.frame.height / 10)),
