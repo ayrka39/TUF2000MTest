@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Calendar" representedClassName="Calendar" syncable="YES" codeGenerationType="class">
+        <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="registers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Register" inverseName="calendar" inverseEntity="Register" syncable="YES"/>
+    </entity>
+    <entity name="Register" representedClassName="Register" syncable="YES" codeGenerationType="class">
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="calendar" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Calendar" inverseName="registers" inverseEntity="Calendar" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Calendar" positionX="-45" positionY="0" width="128" height="75"/>
+        <element name="Register" positionX="-18" positionY="27" width="128" height="90"/>
+    </elements>
+</model>
