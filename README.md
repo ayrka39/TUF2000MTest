@@ -17,7 +17,7 @@ here are some screenshots from the app.
 ![tuf2000mapp02](https://user-images.githubusercontent.com/16446932/29757942-2b8ad182-8bb8-11e7-9abd-3a001ff74a47.png)
 
 ## Usage
-It is a iOS app file written with Swift. On Mac, Download a Xcode file you can see the code and run it in the simulator or check on an iPhone. It has not been published on the AppStore and most likely will not be.
+It is an iOS app file written with Swift. On Mac, Download a Xcode file you can see the code and run it in the simulator or check on an iPhone. It has not been published on the AppStore and most likely will not be.
 
 
 ## Issues
@@ -27,8 +27,8 @@ It is a iOS app file written with Swift. On Mac, Download a Xcode file you can s
 <br><br>
 3. I am not really sure my solution is correct, when I found that some values do not seem to be realistic, such as Fluid sound speed. 
 <br><br>
-4. I spent too much time to make a nicer app, which ended up being a simple, basic one, only to show the test result. I may update it later for better interface and features. 
+4. I tried to make a nicer app, but it ended up being a simple, basic one, only to show the test result. I may update it later for better interface and features. 
 
 
 ### Thanks
-I appreciate that Gambit offered this good opportunity to learn something new to me. It was a big challenge. I learned a lot.
+I appreciate that Gambit offered me this good opportunity to learn something new. It was a big challenge. I learned a lot.
